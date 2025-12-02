@@ -17,9 +17,7 @@ Sistema completo de gerenciamento de chamados técnicos (HelpDesk) desenvolvido 
 - [Pré-requisitos](#-pré-requisitos)
 - [Instalação](#-instalação)
 - [Estrutura do Projeto](#-estrutura-do-projeto)
-- [Sistema de Permissões](#-sistema-de-permissões)
 - [API Endpoints](#-api-endpoints)
-- [Screenshots](#-screenshots)
 - [Autores](#-autores)
 - [Licença](#-licença)
 
