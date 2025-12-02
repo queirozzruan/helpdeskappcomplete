@@ -1,0 +1,113 @@
+.container {
+  width: 98%;
+  max-width: 1600px;
+  margin: 2rem auto;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+button {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  margin-top: 0;
+}
+
+.mat-elevation-z8 {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+table {
+  width: 100%;
+}
+
+th {
+  background: white;
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 16px 12px !important;
+}
+
+td {
+  padding: 16px 12px !important;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+tr:hover {
+  background-color: var(--light-blue);
+  transition: background-color 0.2s ease;
+}
+
+.edit {
+  color: var(--primary-blue);
+  transition: all 0.3s ease;
+}
+
+.edit:hover {
+  color: var(--dark-blue);
+  transform: scale(1.2);
+}
+
+mat-icon {
+  color: var(--success);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+mat-icon:hover {
+  color: var(--dark-blue);
+  transform: scale(1.2);
+}
+
+.edit,
+mat-icon {
+  margin-left: 0.8rem;
+}
+
+mat-paginator {
+  border-top: 2px solid var(--border-color);
+  background-color: var(--light-blue);
+}

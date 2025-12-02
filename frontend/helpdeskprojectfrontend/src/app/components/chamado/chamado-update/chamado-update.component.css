@@ -1,0 +1,76 @@
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto 3rem;
+  padding: 0;
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+  padding: 2rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+  background: var(--primary-blue);
+  padding: 1.5rem;
+  border-radius: 4px;
+  letter-spacing: -0.5px;
+}
+
+mat-form-field {
+  margin-bottom: 0.8rem;
+}
+
+button {
+  margin-top: 1rem;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:not(:disabled):hover {
+  transform: translateY(-2px);
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+mat-icon {
+  opacity: 0.7;
+  color: var(--primary-blue);
+}
+
+/* Input focus effect */
+::ng-deep
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thick {
+  color: var(--primary-blue);
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--primary-blue);
+}

@@ -1,0 +1,89 @@
+.container {
+  width: 90%;
+  max-width: 600px;
+  margin: 2rem auto 3rem;
+  padding: 0;
+  border-radius: 16px;
+  background: white;
+  overflow: hidden;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form {
+  padding: 2rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: white;
+  background: #2e7d32;
+  padding: 1.5rem;
+  border-radius: 4px;
+  letter-spacing: -0.5px;
+}
+
+.status-prioridade {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.status-prioridade mat-form-field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.tecnico,
+.cliente {
+  width: 100%;
+  margin-bottom: 0.8rem;
+}
+
+mat-form-field {
+  margin-bottom: 0.8rem;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+button {
+  margin-top: 1.5rem;
+  height: 48px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Disabled inputs styling */
+::ng-deep .mat-form-field.mat-form-field-disabled .mat-form-field-label {
+  color: var(--text-secondary);
+}
+
+::ng-deep .mat-form-field.mat-form-field-disabled input,
+::ng-deep .mat-form-field.mat-form-field-disabled textarea {
+  color: var(--text-primary);
+  font-weight: 500;
+}

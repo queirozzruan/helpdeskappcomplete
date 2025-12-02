@@ -1,0 +1,48 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side" opened>
+    <img src="assets/img/helpdesk.png" alt="HelpDesk Logo">
+    <mat-nav-list class="nav-list">
+
+      <a mat-list-item routerLink="home">
+        <i class="material-icons">home</i>
+        Home
+      </a>
+
+      <a mat-list-item routerLink="tecnicos" *ngIf="!isCliente()">
+        <i class="material-icons">account_circle</i>
+        Técnicos
+      </a>
+
+      <a mat-list-item routerLink="clientes" *ngIf="!isCliente()">
+        <i class="material-icons">person</i>
+        Clientes
+      </a>
+
+      <a mat-list-item routerLink="chamados">
+        <i class="material-icons">support</i>
+        Chamados
+      </a>
+
+      <a mat-list-item (click)="logout()">
+        <i class="material-icons">exit_to_app</i>
+        Logout
+      </a>
+
+    </mat-nav-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <mat-toolbar color="primary" class="header-toolbar">
+      <button mat-icon-button (click)="drawer.toggle()" class="menu-button">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>HelpDesk ES2</span>
+      <span class="spacer"></span>
+      <button mat-icon-button (click)="logout()" matTooltip="Logout">
+        <mat-icon>exit_to_app</mat-icon>
+      </button>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </div>
+
+</mat-drawer-container>

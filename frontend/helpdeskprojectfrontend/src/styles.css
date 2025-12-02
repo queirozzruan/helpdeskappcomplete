@@ -1,0 +1,178 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~ngx-toastr/toastr.css";
+
+:root {
+  --primary-blue: #2561cf;
+  --secondary-blue: #00d4ff;
+  --dark-blue: #1a4a9e;
+  --light-blue: #e3f2fd;
+  --bg-color: #f5f7fa;
+  --card-bg: #ffffff;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --border-color: #e0e6ed;
+  --success: #4caf50;
+  --warning: #ff9800;
+  --danger: #f44336;
+  --shadow-sm: 0 2px 8px rgba(37, 97, 207, 0.08);
+  --shadow-md: 0 4px 16px rgba(37, 97, 207, 0.12);
+  --shadow-lg: 0 8px 24px rgba(37, 97, 207, 0.16);
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--bg-color);
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Scrollbar customization */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light-blue);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-blue);
+}
+
+/* Toastr customization */
+#toast-container > div {
+  opacity: 1;
+  box-shadow: var(--shadow-lg);
+  border-radius: 8px;
+  padding: 16px 20px;
+}
+
+#toast-container > .toast-error {
+  background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}
+
+#toast-container > .toast-success {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+}
+
+#toast-container > .toast-info {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--dark-blue) 100%
+  );
+}
+
+#toast-container > .toast-warning {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+}
+
+/* Material Design Overrides */
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: var(--border-color);
+}
+
+.mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+  color: var(--primary-blue);
+}
+
+.mat-form-field.mat-focused .mat-form-field-label {
+  color: var(--primary-blue);
+}
+
+.mat-button,
+.mat-raised-button,
+.mat-stroked-button,
+.mat-flat-button {
+  border-radius: 8px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.mat-flat-button.mat-primary {
+  background: linear-gradient(
+    135deg,
+    var(--primary-blue) 0%,
+    var(--dark-blue) 100%
+  );
+  box-shadow: var(--shadow-sm);
+}
+
+.mat-flat-button.mat-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.mat-stroked-button {
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.mat-stroked-button:hover {
+  background-color: var(--light-blue);
+}
+
+.mat-elevation-z8 {
+  box-shadow: var(--shadow-md) !important;
+  border-radius: 12px;
+}
+
+.mat-card {
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Table styling */
+.mat-table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mat-header-cell {
+  font-weight: 600;
+  color: var(--text-primary);
+  background-color: var(--light-blue);
+}
+
+.mat-row:hover {
+  background-color: var(--light-blue);
+  transition: background-color 0.2s ease;
+}
+
+/* Loading and animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease;
+}
